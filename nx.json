@@ -12,7 +12,7 @@
       "!{projectRoot}/jest.config.[jt]s",
       "!{projectRoot}/test-setup.[jt]s"
     ],
-    "sharedGlobals": []
+    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
   "plugins": [
     {
@@ -26,8 +26,18 @@
         "typecheckTargetName": "typecheck"
       }
     },
-    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
-    { "plugin": "@nx/jest/plugin", "options": { "targetName": "test" } }
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "plugin": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    }
   ],
   "generators": {
     "@nx/react": {
@@ -37,7 +47,9 @@
         "linter": "eslint",
         "bundler": "vite"
       },
-      "component": { "style": "css" },
+      "component": {
+        "style": "css"
+      },
       "library": {
         "style": "css",
         "linter": "eslint",
