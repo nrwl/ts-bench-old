@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@acme/huge-lib": ["packages/huge-lib/src/index.tsx"],
       "@acme/lib-1": ["packages/lib-1/src/index.tsx"],
       "@acme/lib-10": ["packages/lib-10/src/index.tsx"],
       "@acme/lib-100": ["packages/lib-100/src/index.tsx"],
